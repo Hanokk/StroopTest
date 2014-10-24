@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stroop Task</title>
+    <script type="text/javascript" src="JS/jscharts.js"></script>
+    <link rel="stylesheet" href="CSS/stroop.css">
+  </head>
+  <body>
+  <div id="han-title">STROOP TEST</div>
+<div id="han-Intro"><p id="han-text"><strong>This is a test of reaction. Reaction time is an important skill in many of our day to day activities. Would you like improve your reaction time</strong></p>
+<button onmousedown="form1()">Take Test</button>
+</div>
+
+<div id="han-form">
+  <div>Name<input id="names" class="Field" type="text" name="name1" value="" /> </div>  <br>
+  <div>DOB<input id="DOB" class="Field" type="text" name="DOB" value="" /></div><br>
+  <div>Sex<select id="sex" class="Field">
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Others">Others</option>
+  </select></div><br>
+  <div>Highest level of Education<input id="edu" class="Field" type="text" name="edu" value="" /></div><br>
+  <div>Mother Tougue<input id="MT" class="Field" type="text" name="MT" value="" /></div><br>
+  <div>Place to which u belong<input id="place" class="Field" type="text" name="place" value="" /></div><br>
+  <div><button onmousedown="validate()">Submit</button></div>
+</div>
+
+<div id="instructions"><h1>Instructions</h1>
+    <p>Answer the colour not the word</p>
+    <p>Contaains 5 demo questions and 30 actual questions</p>
+    <p>Demo questions are not for evaluation</p>
+    <p>Each right answer carries +1 and no negative</p>
+    <p>Time taken for each question are also calculated</p>
+    <p>You can check the output in graph and also on excel sheet</p><br>
+  <button onmousedown="Demo()">Start Test</button></div>
+
+    <div id="startstop">
+        <p id="timetext"></p> <br>0:<span id="time">5</span><br>
+       <!--<button onmousedown="Questions()">start</button>-->
+    </div>
+    <div id="content">
+    </div>
+    <div id="options">
+      <p id="A" onmousedown="Record(this.id)"></p>
+      <p id="B" onmousedown="Record(this.id)"></p>
+      <p id="C" onmousedown="Record(this.id)"></p>
+      <p id="D" onmousedown="Record(this.id)"></p>
+    </div>
+    <div id="chartcontainer">This is just a replacement in case Javascript is not available or used for SEO purposes
+    </div><br>
+    <div id="endButton">
+    <div id="result">Score:&nbsp;&nbsp;<span id="score"></span>&nbsp;&nbsp;&nbsp;&nbsp;Total Time:&nbsp;&nbsp;
+    <span id="totaltime"></span>
+    </div><br>
+      <button onmousedown="reload()">End Test</button>
+    </div>
+    <script src="JS/stroop.js"></script>
+  </body>
+</html>
