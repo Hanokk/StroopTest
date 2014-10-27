@@ -1,6 +1,7 @@
 body
 {
   background-image: url('Images/image.png');
+  color: #FFFFFF;
 }
 
 
@@ -86,15 +87,43 @@ body
  
 #options{
   position: absolute;
-  display: block;
+  display: none;
   text-align: center;
   top: 300px;
   width: 100%;
 }
  
-#A,#B,#C.#D
+#A
 {
+  position: relative;
+  background-color: #000000;
   cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+#B
+{
+  position: relative;
+  background-color: #000000;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+#C
+{
+  position: relative;
+  background-color: #000000;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+#D
+{
+  position: relative;
+  background-color: #000000;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
 }
 #start {
   font-size: 48pt;

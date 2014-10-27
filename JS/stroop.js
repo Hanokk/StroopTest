@@ -35,7 +35,7 @@ var hanIntro=document.getElementById('han-Intro');
 var Content=document.getElementById('content');
 var name=document.getElementById('names');
 var opt=document.getElementById('options');
-var maxCount
+var maxCount;
 
 function form1 () {
   formObj.style.display='block';
@@ -143,7 +143,7 @@ function StartTest () {
   opt.style.display='None';
   initial=5;
   document.getElementById('time').innerHTML="5";
-  document.getElementById('timetext').innerHTML="Start whenever you are ready or it automatically starts in";
+  document.getElementById('timetext').innerHTML="Test will start in";
     var timeElement=document.getElementById('time');
     var myVar=setInterval(function () {myTimer()}, 1000);
     function myTimer () {
@@ -198,7 +198,7 @@ function Questions (){
   document.getElementById('content').innerHTML=TEXT[textIndex];
   document.getElementById('content').style.color=COLORS[colorIndex];
   AnswerIndex=Math.floor(options.length*Math.random());
-  options[AnswerIndex]=TEXT[colorIndex];
+  options[AnswerIndex]=COLORS[colorIndex];
   hash[colorIndex]=1;
   for (i =0 ; i < 4; i++) {
     if(i!=AnswerIndex)
@@ -207,17 +207,17 @@ function Questions (){
         {
           Index = Math.floor(COLORS.length * Math.random());
           if (hash[Index]!=1) {
-            options[i]=TEXT[Index];
+            options[i]=COLORS[Index];
             hash[Index]=1;
             break;
           }
         }
       }
   }
-  document.getElementById('A').innerHTML=options[0];
-  document.getElementById('B').innerHTML=options[1];
-  document.getElementById('C').innerHTML=options[2];
-  document.getElementById('D').innerHTML=options[3];
+  document.getElementById('A').style.backgroundColor=options[0];
+  document.getElementById('B').style.backgroundColor=options[1];
+  document.getElementById('C').style.backgroundColor=options[2];
+  document.getElementById('D').style.backgroundColor=options[3];
 
   lastColorIndex = colorIndex;
   lastTextIndex = textIndex;
