@@ -2,6 +2,15 @@
 <html>
   <head>
     <title>Stroop Task</title>
+     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
     <script type="text/javascript" src="JS/jscharts.js"></script>
     <link rel="stylesheet" href="CSS/stroop.css">
   </head>
@@ -13,7 +22,7 @@
 
 <div id="han-form">
   <div>Name<input id="names" class="Field" type="text" name="name1" value="" /> </div>  <br>
-  <div>DOB<input id="DOB" class="Field" type="text" name="DOB" value="" /></div><br>
+  <div>DOB<input id="datepicker" class="Field" type="date" name="DOB" value="" /></div><br>
   <div>Sex<select id="sex" class="Field">
   <option value="Male">Male</option>
   <option value="Female">Female</option>
