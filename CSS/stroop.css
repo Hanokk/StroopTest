@@ -92,38 +92,32 @@ body
   top: 300px;
   width: 100%;
 }
+
+#A,#B,#C,#D
+{
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  left: 400px;
+}
+}
  
 #A
 {
-  position: relative;
   background-color: #000000;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 #B
 {
-  position: relative;
   background-color: #000000;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 #C
 {
-  position: relative;
   background-color: #000000;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 #D
 {
-  position: relative;
   background-color: #000000;
-  cursor: pointer;
-  width: 50px;
-  height: 30px;
 }
 #start {
   font-size: 48pt;
