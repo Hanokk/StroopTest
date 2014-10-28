@@ -42,7 +42,7 @@ function form1 () {
   IntroObj.style.display='None';
   hanIntro.style.display='None';
   document.getElementById('names').value=info[0][1];
-  document.getElementById('DOB').value=info[1][1];
+  document.getElementById('datepicker').value=info[1][1];
   document.getElementById('edu').value=info[4][1];
   document.getElementById('MT').value=info[5][1];
   document.getElementById('place').value=info[6][1];
@@ -60,7 +60,7 @@ function validate () {
   name.focus();
   return false;
   }
-  if(trim(document.getElementById('DOB').value)=="")
+  if(trim(document.getElementById('datepicker').value)=="")
   { 
   alert("DOB must be filled out!");
   document.getElementById('DOB').focus();
@@ -92,7 +92,7 @@ function validate () {
   }
   var d=new Date();
   info[0][1]=document.getElementById('names').value;
-  info[1][1]=document.getElementById('DOB').value;
+  info[1][1]=document.getElementById('datepicker').value;
   info[2][1]=d.toDateString();
   info[3][1]=document.getElementById('sex').value;
   info[4][1]=document.getElementById('edu').value;
@@ -268,6 +268,7 @@ function Record (Answer) {
     info.forEach(function(infoArray,index){dataString=infoArray.join(",");csvContent+=dataString+"\n";});
     csvContent+="Score"+","+Score+"\n";
     csvContent+="TotalTime"+","+Math.round(TotalTime*100)/100+"\n";
+    csvContent+="s.no,time,score\n";
     Result.forEach(function(infoArray, index)
     {
     dataString = infoArray.join(",");
@@ -276,6 +277,7 @@ function Record (Answer) {
 
     var encodedUri = encodeURI(csvContent);
     var link = document.createElement("a");
+    //for chrome onlysupport feature
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", "my_data.csv");
     link.click();
